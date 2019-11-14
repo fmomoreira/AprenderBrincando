@@ -72,12 +72,7 @@
     </div>
   </section>
 
-  <div id="pagination">
-    <div class="container" id="nextpreview">
-      
-      <button type="button" class="btn btn-success pt-2 pb-2 pl-5 pr-5  mt-2 mb-2" id="d" >Próximo</button>
-    </div>
-  </div>
+ 
 
   <!-- Optional JavaScript -->
   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
@@ -132,13 +127,16 @@ Swal.fire({
     });
     var alternativaE = document.querySelector("#e");
     alternativaE.addEventListener("click", function () {
-      Swal.fire(
-  'Parabéns!',
-  'Você Acertou!',
-  'success'
-)
-
-    });
+      Swal.fire({
+  position: 'top-center',
+  icon: 'success',
+  title: 'Parabéns, você acertou!',
+  showConfirmButton: false,
+  timer: 1500
+ 
+});
+setTimeout(function(){window.location.href = "index2.html";}, 1300);
+});
  
     
     </script>
